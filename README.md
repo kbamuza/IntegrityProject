@@ -1,7 +1,5 @@
 # IntegrityProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
-
 ## Start the Node server
 
 Ensure that you have Expressjs, mySQL and bodyParser installed </br>
