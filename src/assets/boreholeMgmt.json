@@ -1,0 +1,34 @@
+[
+    {
+      "borehole_id": 1,
+      "borehole_name": "boreholeNumber1",
+      "borehole_type": "boreholeNumber1",
+      "borehole_latitude": "1lat",
+      "borehole_longitude": "1lng",
+      "borehole_elevation": "1elevation"
+    },
+    {
+      "borehole_id": 2,
+      "borehole_name": "boreholeNumber2",
+      "borehole_type": "boreholeNumber2",
+      "borehole_latitude": "2lat",
+      "borehole_longitude": "2lng",
+      "borehole_elevation": "2elevation"
+    },
+    {
+      "borehole_id": 3,
+      "borehole_name": "boreholeNumber3",
+      "borehole_type": "boreholeNumber3",
+      "borehole_latitude": "3lat",
+      "borehole_longitude": "3lng",
+      "borehole_elevation": "3elevation"
+    },
+    {
+      "borehole_id": 4,
+      "borehole_name": "boreholeNumber4",
+      "borehole_type": "boreholeNumber4",
+      "borehole_latitude": "4lat",
+      "borehole_longitude": "4lng",
+      "borehole_elevation": "4elevation"
+    }
+  ]

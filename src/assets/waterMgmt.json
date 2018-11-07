@@ -1,0 +1,27 @@
+[
+    {
+      "water_level_id": 1,
+      "water_level_date": "date1",
+      "water_level_reading": "readingNumber1"
+    },
+    {
+      "water_level_id": 2,
+      "water_level_date": "date2",
+      "water_level_reading": "readingNumber2"
+    },
+    {
+      "water_level_id": 3,
+      "water_level_date": "date3",
+      "water_level_reading": "readingNumber3"
+    },
+    {
+      "water_level_id": 4,
+      "water_level_date": "date4",
+      "water_level_reading": "readingNumber4"
+    },
+    {
+      "water_level_id": 5,
+      "water_level_date": "date5",
+      "water_level_reading": "readingNumber5"
+    }
+  ]

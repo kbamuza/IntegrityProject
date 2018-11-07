@@ -1,0 +1,56 @@
+<div class="example-container">
+
+  <mat-card style="text-align: left"><mat-card-title>Boreholes</mat-card-title>
+
+  <mat-form-field style="width: 100%">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="borehole_type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.borehole_type}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="borehole_name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.borehole_name}} </td>
+    </ng-container>
+  
+    <!-- Latitude Column -->
+    <ng-container matColumnDef="borehole_latitude">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Latitude (WGS84 format) </th>
+      <td mat-cell *matCellDef="let element"> {{element.borehole_latitude}} </td>
+    </ng-container>
+  
+    <!-- Longitude Column -->
+    <ng-container matColumnDef="borehole_longitude">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Longitude (WGS84 format) </th>
+      <td mat-cell *matCellDef="let element"> {{element.borehole_longitude}} </td>
+    </ng-container>
+
+    <!-- Longitude Column -->
+    <ng-container matColumnDef="borehole_elevation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Elevation (meters) </th>
+      <td mat-cell *matCellDef="let element"> {{element.borehole_elevation}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+      </th>
+      <td mat-cell *matCellDef="let row">
+          <button mat-raised-button color="primary" (click)="editBorehole(row)">Edit Borehole</button>
+          <button mat-raised-button color="primary" (click)="viewWaterLevels(row)">View Water Levels</button>
+          <button mat-raised-button color="primary" (click)="addWaterLevel(row)">Add Water Level</button>
+          <button mat-raised-button color="accent" matTooltip="There's no 'are you sure' message" matTooltipClass="example-tooltip-red" (click)="deleteBorehole(row)">Delete</button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+</div>

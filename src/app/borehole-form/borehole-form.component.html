@@ -1,0 +1,39 @@
+<div [hidden]="hidden" >
+<mat-card style="text-align: left">
+  <mat-card-title>Add/Edit Borehole</mat-card-title>
+<form name="myForm" class="example-container" (ngSubmit)="onSubmit()" #myForm="ngForm">
+   
+        <mat-form-field >
+          <input required matInput placeholder="Borehole Name" id="name" [(ngModel)]="borehole.borehole_name" name="borehole_name">
+          <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field >
+          <input required matInput placeholder="Borehole Type" id="type" [(ngModel)]="borehole.borehole_type" name="borehole_type">
+          <mat-error *ngIf="type.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field >
+          <input matInput placeholder="Borehole Latitude (WGS84 format)" id="lat" [(ngModel)]="borehole.borehole_latitude" name="borehole_latitude">
+          <mat-error *ngIf="lat.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+      
+        <mat-form-field >
+          <input required matInput placeholder="Borehole Longitude (WGS84 format)" id="lng" [(ngModel)]="borehole.borehole_longitude" name="borehole_longitude">
+          <mat-error *ngIf="lng.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+      
+        <mat-form-field >
+          <input required matInput  placeholder="Borehole Elevation (meters)" id="elevation" [(ngModel)]="borehole.borehole_elevation" name="borehole_elevation">
+          <mat-error *ngIf="elevation.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+        <button [disabled]="myForm.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+        
+</form>
+<button style="width: 100%" mat-raised-button color="accent" (click)="cancel()">Cancel</button>
+ 
+</mat-card>
+</div>

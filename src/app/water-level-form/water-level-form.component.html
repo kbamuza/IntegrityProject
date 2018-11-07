@@ -1,0 +1,25 @@
+<div [hidden]="hidden" >
+<mat-card style="text-align: left" >
+  <mat-card-title>Add/Edit Water Level</mat-card-title>
+ 
+<form  class="example-container" (ngSubmit)="onSubmit()" #myForm="ngForm">
+   
+        <mat-form-field>
+          <input required id="dateValue" matInput [matDatepicker]="dp3" [(ngModel)]="waterLevel.water_level_date" name="water_level_date" placeholder="{{date}}" disabled>
+          <mat-error *ngIf="dateValue.invalid">{{getErrorMessage()}}</mat-error>
+          <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+        </mat-form-field>
+      
+        <mat-form-field >
+          <input required  id="reading" matInput placeholder="Reading (WGS84 format)" id="reading" [(ngModel)]="waterLevel.water_level_reading" name="water_level_reading">
+          <mat-error *ngIf="reading.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+        <button [disabled]="myForm.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+
+</form>
+<button style="width: 100%" mat-raised-button color="accent" (click)="cancel()">Cancel</button>
+  
+</mat-card>
+</div>
